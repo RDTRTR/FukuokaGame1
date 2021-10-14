@@ -12,7 +12,9 @@ public class CubeMove : MonoBehaviour
 
 	void Start()
 	{
+
 		cubeSizeHalf = transform.localScale.x / 2f;
+
 	}
 
 	void Update()
@@ -50,7 +52,7 @@ public class CubeMove : MonoBehaviour
 		StartCoroutine(MoveCube());
 	}
 
-	IEnumerator MoveCube()
+    IEnumerator MoveCube()
 	{
 		//‰ñ“]’†‚Ìƒtƒ‰ƒO‚ð—§‚Ä‚é
 		isRotate = true;
@@ -78,20 +80,5 @@ public class CubeMove : MonoBehaviour
 		rotateAxis = Vector3.zero;
 
 		yield break;
-	}
-
-	bool ObjDic(Vector3 DirVec)
-    {
-		RaycastHit hit;
-
-		Physics.Raycast(transform.position, DirVec, out hit);
-		Debug.DrawRay(transform.position, DirVec);
-			
-		if(hit.distance <= 0.8)
-        {
-			return true;
-        }
-
-		return false;
 	}
 }
