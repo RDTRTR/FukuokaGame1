@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Item
+  - Switch1
   layers:
   - Default
   - TransparentFX
