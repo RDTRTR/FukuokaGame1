@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 03eee55ce5e35574b9a497adbcc77514, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f06886ca08640a4499acbdacce9b7e1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -199,7 +199,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1b65a3eaf73873f4d81f2ed00f95d0db, type: 3}
+    m_Font: {fileID: 12800000, guid: 404f54527f357ea4ba1eaef4725a2f4e, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 03eee55ce5e35574b9a497adbcc77514, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f06886ca08640a4499acbdacce9b7e1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -333,9 +333,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 1c0c736944d130145ae87eb3cfb70ee1, type: 3}
         m_TargetAssemblyTypeName: Gamesystem, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1b65a3eaf73873f4d81f2ed00f95d0db, type: 3}
+    m_Font: {fileID: 12800000, guid: 404f54527f357ea4ba1eaef4725a2f4e, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
