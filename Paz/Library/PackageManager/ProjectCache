@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637691780260899855
-    m_Hash: 3514944958
+      ticks: 637691787400599387
+    m_Hash: 3531869884
   m_LockFileStatus:
     m_FilePath: C:/Users/GA3/Documents/GitHub/FukuokaGame1/Paz/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637691780341464511
-    m_Hash: 3518015605
+      ticks: 637691787400599387
+    m_Hash: 51398154
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -71,7 +71,9 @@ m_PackageAssets:
         - 1.12.5
         - 1.13.5
         - 1.14.1
+        - 1.14.4
         - 1.15.1
+        - 1.15.4
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -89,7 +91,9 @@ m_PackageAssets:
         - 1.12.5
         - 1.13.5
         - 1.14.1
+        - 1.14.4
         - 1.15.1
+        - 1.15.4
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15

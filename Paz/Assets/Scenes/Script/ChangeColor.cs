@@ -8,7 +8,7 @@ public class ChangeColor : MonoBehaviour
     //オブジェクトが衝突したとき
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.name == "Plane")
         {
             var change = other.gameObject.GetComponent<Renderer>().material;
 

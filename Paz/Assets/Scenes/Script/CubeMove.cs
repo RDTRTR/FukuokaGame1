@@ -48,7 +48,10 @@ public class CubeMove : MonoBehaviour
 		}
 		// 入力がない時はコルーチンを呼び出さないようにする
 		if (rotatePoint == Vector3.zero)
+        {
 			return;
+		}
+			
 		StartCoroutine(MoveCube());
 	}
 
@@ -74,10 +77,11 @@ public class CubeMove : MonoBehaviour
 			yield return null;
 		}
 
-		//回転中のフラグを倒す
+        //回転中のフラグを倒す
 		isRotate = false;
 		rotatePoint = Vector3.zero;
 		rotateAxis = Vector3.zero;
+		
 
 		yield break;
 	}
