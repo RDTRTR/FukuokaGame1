@@ -7,7 +7,7 @@ TagManager:
   - Wall
   - Item
   - Switch1
-  - key
+  - Count
   layers:
   - Default
   - TransparentFX

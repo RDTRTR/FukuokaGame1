@@ -1,18 +1,57 @@
 using UnityEngine;
 using System.Collections;
 
+public enum panelsetcolor
+{
+	Red,
+	Blue,
+	Green,
+	White,
+};
+
 public class CubeMove : MonoBehaviour
 {
+
+	public panelsetcolor winnercolor;
+
+	private bool Colorgudge()
+    {
+		
+		panelsetcolor checkcolor;
+
+		checkcolor = panelObject[0].GetComponent<ChangeColor>().mycolor;
+		Debug.Log("call"+ checkcolor);
+		for (int i = 0; i < 6; i++)
+        {
+			if(checkcolor != panelObject[i].GetComponent<ChangeColor>().mycolor)
+            {
+				return false;
+            }
+        }
+
+		if(checkcolor == winnercolor)
+        {
+			return true;
+		}
+
+		return false;
+
+    }
+
+
 	Vector3 rotatePoint = Vector3.zero;  //回転の中心
 	Vector3 rotateAxis = Vector3.zero;   //回転軸
 	float cubeAngle = 0f;                //回転角度
 
+	public GameObject[] panelObject;
+
 	float cubeSizeHalf;                  //キューブの大きさの半分
 	bool isRotate = false;               //回転中に立つフラグ。回転中は入力を受け付けない
+	bool latestisRotate = false;
 
 	void Start()
 	{
-
+		
 		cubeSizeHalf = transform.localScale.x / 2f;
 
 	}
@@ -21,20 +60,24 @@ public class CubeMove : MonoBehaviour
 	{
 		//回転中は入力を受け付けない
 		if (isRotate)
-			return;
+		{
+			latestisRotate = true;
+
+			return;}
+			
 
 		if (Input.GetKeyDown(KeyCode.RightArrow))
 		{
-			
+
 			rotatePoint = transform.position + new Vector3(cubeSizeHalf, -cubeSizeHalf, 0f);
 			rotateAxis = new Vector3(0, 0, -1);
 		}
 		if (Input.GetKeyDown(KeyCode.LeftArrow))
 		{
-			
+
 			rotatePoint = transform.position + new Vector3(-cubeSizeHalf, -cubeSizeHalf, 0f);
 			rotateAxis = new Vector3(0, 0, 1);
-			
+
 		}
 		if (Input.GetKeyDown(KeyCode.UpArrow))
 		{
@@ -48,12 +91,24 @@ public class CubeMove : MonoBehaviour
 		}
 		// 入力がない時はコルーチンを呼び出さないようにする
 		if (rotatePoint == Vector3.zero)
-        {
+		{
 			return;
 		}
-			
+
 		StartCoroutine(MoveCube());
-	}
+		
+        if (latestisRotate)
+        {
+            if (Colorgudge())
+            {
+                Debug.Log("win");
+            }
+            latestisRotate = false;
+        }
+
+    }
+
+
 
     IEnumerator MoveCube()
 	{

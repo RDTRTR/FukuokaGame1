@@ -11,7 +11,7 @@ public class Camerafollow : MonoBehaviour
     {
         targetObj = GameObject.Find("Cube");
         targetPos = targetObj.transform.position;
-        Debug.Log(targetPos);
+        //Debug.Log(targetPos);
     }
 
     void Update()
